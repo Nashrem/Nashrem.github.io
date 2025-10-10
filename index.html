@@ -1,34 +1,91 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>PazCorp • Stock – Inmobiliarias Emuna</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Complemento de Google Sheets para exportar CSV por proyecto desde la hoja activa.">
-  <style>body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:40px auto;padding:0 16px;line-height:1.6}code{background:#f6f8fa;padding:2px 6px;border-radius:4px}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emuna – Exportador CSV para Google Sheets™</title>
+  <meta name="description" content="Complemento de Google Sheets™ para exportar CSV por proyecto de inmobiliarias: PazCorp, Euro, Fundamenta, Ingevec, Leben, Norte Verde, Sento, Coloso, Icalma, Imagina, Regenera y más." />
+  <link rel="icon" href="/assets/logo.png" />
+  <style>
+    :root{--p:#0B5FFF;--bg:#0b1220;--fg:#e8ecf4;--muted:#9aa7bd;--card:#0f1830}
+    *{box-sizing:border-box} body{margin:0;font:16px system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    .wrap{max-width:860px;margin:auto;padding:32px 20px}
+    header{display:flex;align-items:center;gap:12px;margin:8px 0 24px}
+    header img{width:40px;height:40px}
+    h1{font-size:28px;line-height:1.2;margin:0}
+    .cta{display:inline-block;background:var(--p);color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+    .card{background:var(--card);border:1px solid #1d2a44;border-radius:14px;padding:18px;margin:16px 0}
+    h2{font-size:20px;margin:0 0 8px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .muted{color:var(--muted)}
+    footer{margin:28px 0 8px;color:var(--muted);font-size:14px}
+    a{color:#9fc1ff}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  </style>
 </head>
 <body>
-  <h1>PazCorp • Stock</h1>
-  <p>Complemento de Google Sheets que genera <b>archivos CSV por proyecto</b> a partir de la hoja activa y los guarda en tu Google Drive.</p>
+  <div class="wrap">
+    <header>
+      <img src="/assets/logo.png" alt="Emuna" />
+      <h1>Emuna – Exportador CSV para Google Sheets™</h1>
+    </header>
 
-  <h2>Cómo usarlo</h2>
-  <ol>
-    <li>Abre tu Google Sheet con los datos.</li>
-    <li>Ve a <b>Extensiones → Complementos → PazCorp • Stock</b> y ábrelo.</li>
-    <li>Pulsa <b>Exportar CSV</b>. Los CSV se crean en tu Google Drive.</li>
-  </ol>
+    <p class="muted">Genera <strong>archivos CSV por proyecto</strong> directamente desde Google Sheets™. Todo se procesa en tu navegador/Apps Script; no enviamos datos a servidores propios.</p>
 
-  <h2>Permisos solicitados</h2>
-  <ul>
-    <li><code>spreadsheets.currentonly</code>: leer el Spreadsheet actual.</li>
-    <li><code>drive.file</code>: crear/gestionar solo los archivos que genera el complemento.</li>
-  </ul>
+    <p>
+      <a class="cta" href="https://workspace.google.com/marketplace/app/TU-LISTING-ID" target="_blank" rel="noopener">Instalar desde Google Workspace Marketplace</a>
+    </p>
 
-  <h2>Privacidad (resumen)</h2>
-  <p>No enviamos datos a servidores externos. Todo se procesa en Apps Script y los CSV se guardan en tu propio Google Drive.</p>
-  <p>Consulta la <a href="/privacy.html">Política de Privacidad</a> y los <a href="/tos.html">Términos de Servicio</a>.</p>
+    <div class="grid">
+      <section class="card">
+        <h2>¿Cómo usarlo?</h2>
+        <ol>
+          <li>Abre tu Google Sheet con los datos.</li>
+          <li>Ve a <b>Extensiones → Emuna – Exportador CSV</b>.</li>
+          <li>Elige la inmobiliaria (macro) y pulsa <b>Exportar CSV</b>.</li>
+          <li>Los CSV se crean en la misma carpeta del Spreadsheet (Google Drive).</li>
+        </ol>
+      </section>
 
-  <h2>Soporte</h2>
-  <p>Escríbenos a <a href="mailto:thenashrem@gmail.com">thenashrem@gmail.com</a>.</p>
+      <section class="card">
+        <h2>Permisos solicitados</h2>
+        <ul>
+          <li><code>spreadsheets.currentonly</code>: leer el Spreadsheet actual.</li>
+          <li><code>drive</code>: crear/gestionar archivos CSV que genera el complemento.</li>
+        </ul>
+        <p class="muted">No accedemos a otras hojas ni a tu Drive completo fuera de lo estrictamente necesario.</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Inmobiliarias / macros incluidas</h2>
+      <ul>
+        <li>PazCorp</li>
+        <li>Euro</li>
+        <li>Fundamenta</li>
+        <li>Ingevec</li>
+        <li>Leben</li>
+        <li>Norte Verde</li>
+        <li>Sento</li>
+        <li>Coloso</li>
+        <li>Icalma</li>
+        <li>Imagina</li>
+        <li>Regenera</li>
+        <li class="muted">…y el resto según tu plan (hasta 22 en total).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Soporte</h2>
+      <p>¿Dudas o reporte de fallos? Escríbenos a <a href="mailto:thenashrem@gmail.com">thenashrem@gmail.com</a> o visita la <a href="/support.html">página de soporte</a>.</p>
+    </section>
+
+    <footer>
+      Google Sheets™ es una marca de Google LLC. Este producto no está afiliado a Google LLC.
+      · <a href="/privacy.html">Privacidad</a> · <a href="/tos.html">Términos</a>
+    </footer>
+  </div>
 </body>
 </html>
+
