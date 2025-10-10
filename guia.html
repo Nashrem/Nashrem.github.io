@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Guía rápida · Emuna – Exportador CSV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía rápida del complemento Emuna – Exportador CSV para Google Sheets.">
+  <link rel="icon" href="https://nashrem.github.io/logo.png">
+  <style>
+    :root{--brand:#0B5FFF;--ink:#1a1f36}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;margin:0;color:var(--ink)}
+    header{display:flex;gap:12px;align-items:center;padding:28px 20px;border-bottom:1px solid #eef2f7}
+    header img{width:40px;height:40px}
+    main{max-width:900px;margin:0 auto;padding:24px 20px}
+    h1{margin:.1rem 0 .4rem 0;font-size:1.6rem}
+    h2{margin-top:2rem;font-size:1.25rem}
+    .card{background:#fff;border:1px solid #eef2f7;border-radius:12px;padding:16px;margin:.85rem 0}
+    .steps ol{margin:0;padding-left:18px}
+    .kbd{display:inline-block;border:1px solid #ccd6e0;border-bottom-width:2px;border-radius:6px;padding:2px 6px;font-family:ui-monospace,Menlo,Consolas,monospace;background:#f8fafc}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .muted{color:#54607a}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{border-top:1px solid #eef2f7;margin-top:24px;padding:20px;color:#697386;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/logo.png" alt="Emuna">
+    <div>
+      <h1>Guía rápida — Emuna · Exportador CSV</h1>
+      <div class="muted">Complemento para generar archivos CSV por proyecto desde Google Sheets™</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card steps">
+      <h2>¿Cómo usarlo? (3 pasos)</h2>
+      <ol>
+        <li>Abre tu Google Sheet con los datos originales de la inmobiliaria.</li>
+        <li>Ve a <span class="kbd">Extensiones → Emuna – Exportador CSV</span> y abre el panel.</li>
+        <li>Elige la inmobiliaria y pulsa <span class="kbd">Exportar</span>.  
+            Se generan uno o más <strong>.csv</strong> por proyecto en la misma carpeta de tu Spreadsheet.</li>
+      </ol>
+      <p class="muted">Nota: el add-on solo llama a tus macros ya existentes; no modifica tus hojas.</p>
+    </section>
+
+    <section class="card">
+      <h2>¿Qué filtros aplica automáticamente?</h2>
+      <ul>
+        <li><strong>Departamentos:</strong> Tipo Unidad = “Departamento” (o “Estudio”), Estado = “Disponible”.</li>
+        <li><strong>Secundarios:</strong> solo “Bodega” y “Estacionamiento” (si hay columna de estado, también “Disponible”).</li>
+        <li>Números con coma se exportan con punto (formato texto) para compatibilidad.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Botones disponibles</h2>
+      <div class="grid">
+        <div>
+          <h3>Copahue</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Euro</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Fundamenta</h3>
+          <ul><li>Departamentos</li></ul>
+        </div>
+        <div>
+          <h3>Ingevec</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Leben</h3>
+          <ul><li>Departamentos</li></ul>
+        </div>
+        <div>
+          <h3>Norte Verde</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Sento</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Coloso</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Icalma</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Imagina</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>Regenera</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+        <div>
+          <h3>PazCorp</h3>
+          <ul><li>Departamentos</li><li>Secundarios</li></ul>
+        </div>
+      </div>
+      <p class="muted">Los botones ejecutan funciones Apps Script con los nombres que ya están en tu proyecto. Si alguna inmobiliaria no aparece en tu archivo, ese botón no hará nada.</p>
+    </section>
+
+    <section class="card">
+      <h2>¿Dónde quedan los CSV?</h2>
+      <p>En la <strong>misma carpeta de Google Drive</strong> donde está tu Spreadsheet. Si el archivo no tiene carpeta, se guardan en <em>Mi unidad</em>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Permisos solicitados</h2>
+      <ul>
+        <li><code>spreadsheets.currentonly</code>: leer la hoja activa para generar el CSV.</li>
+        <li><code>drive</code>: crear/mover archivos CSV en tu Google Drive.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Errores comunes &amp; soluciones</h2>
+      <ul>
+        <li><strong>“No se encontró encabezado PROYECTO/TIPO…”</strong>  
+          Asegura que la hoja tenga encabezados en las primeras filas con esos nombres (o sinónimos) y que no estén vacíos.</li>
+        <li><strong>Se genera un CSV vacío</strong>  
+          Revisa que haya filas con Estado = Disponible y el Tipo correcto.</li>
+        <li><strong>No veo los archivos</strong>  
+          Abre la carpeta del Spreadsheet en Drive. Actualiza (F5) o busca por “.csv”.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Privacidad</h2>
+      <p>No enviamos datos a servidores externos. Todo se procesa en Apps Script con tus permisos de Google. Más detalles en la <a href="/privacy.html">Política de privacidad</a> y los <a href="/tos.html">Términos</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Soporte</h2>
+      <p>¿Dudas o quieres agregar otra inmobiliaria? Escríbenos a
+        <a href="mailto:thenasrhem@gmail.com">thenasrhem@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Emuna. Esta página es informativa y acompaña el complemento del Marketplace.
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
